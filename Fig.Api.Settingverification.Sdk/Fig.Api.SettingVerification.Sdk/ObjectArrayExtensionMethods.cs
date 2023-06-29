@@ -10,6 +10,10 @@ public static class ObjectArrayExtensionMethods
             throw new IndexOutOfRangeException($"Less than {index} parameters supplied");
 
         var value = parameters[index];
+
+        if (value is T valueAsT)
+            return valueAsT;
+        
         return (T)TypeDescriptor.GetConverter(typeof(T)).ConvertFrom(value);
     }
 }
