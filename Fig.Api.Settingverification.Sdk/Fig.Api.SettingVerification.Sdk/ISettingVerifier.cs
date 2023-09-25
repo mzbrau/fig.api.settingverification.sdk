@@ -1,6 +1,6 @@
 namespace Fig.Api.SettingVerification.Sdk;
 
-public interface ISettingPluginVerifier
+public interface ISettingVerifier
 {
     string Name { get; }
     
